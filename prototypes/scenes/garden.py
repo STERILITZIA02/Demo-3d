@@ -17,7 +17,7 @@ def tree(m,x,y,mature):
     m.blob(*loc(.06,.01,2.96),.83*s,.74*s,.63*s,'9bac57',rng,9)
 
 
-def garden(step):
+def garden(step, *, yard_only=False):
     m=Model(); box=m.box; rod=m.rod;rng=Random(909)
     box(3.5,2.8,-.26,7.12,5.71,.16,'a48761')
     box(3.5,2.8,-.10,7.08,5.66,.13,'a6b878')
@@ -100,6 +100,8 @@ def garden(step):
                 (x+.45*reach*dx,y+.45*reach*dy,h*.83),
                 (x+.49*reach*dx+width*dy,y+.49*reach*dy-width*dx,h*.72),
                 (x+reach*dx,y+reach*dy,h)],[(0,1,2),(2,1,4),(0,2,3),(3,2,4)])
+    if yard_only:
+        return m
     old=(1.43,2.42); new=(2.91,2.63);p=old if step==0 else new
     # Native model marks for the planting socket, original site and drag direction.
     def ring(cx,cy,r,colour):
