@@ -27,6 +27,14 @@ Hose lengths follow the drawn route from the tap via the bed to each tree.
 With the dependencies below installed, run
 `python prototypes/scenes/render_pitch.py --samples 60` to regenerate the inserts.
 
+### Moving an established tree
+
+[![Garden cutaway showing the root ball beside a gardener's spade and roots extending beyond the digging line](prototypes/pitch-778/G4-established-roots.png)](prototypes/pitch-778/G4-established-roots.png)
+
+The red dashed line traces the soil that would travel with the tree. The exposed
+roots continue into the surrounding ground. To render this 1920 × 1080 detail,
+run `python prototypes/scenes/render_root_study.py`.
+
 ## Early spatial studies
 
 Six low-fidelity 3D views explore two candidate project briefs. Read each row

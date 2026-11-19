@@ -36,14 +36,14 @@ class Camera:
         return T.look_at(origin=(self.target+self.look).tolist(),target=self.target.tolist(),up=[0,0,1]) @ T.scale([self.radius]*2+[1])
 
 
-def draw_render(m,cam,k,spp,width):
+def draw_render(m,cam,k,spp,width,*,ground_z=None):
     # A direction in Mitsuba points from the source towards the scene.
     sun=np.array([-.4,-.35,.85]) if k else SUN
     scene={'type':'scene','integrator':{'type':'path','max_depth':4},
            'sensor':{'type':'orthographic','to_world':cam.transform(),
                      'film':{'type':'hdrfilm','width':width,'height':round(width*H/W),'rfilter':{'type':'tent'}},
                      'sampler':{'type':'independent','sample_count':spp}},
-           'ground':{'type':'rectangle','to_world':T.translate([0,0,-.267 if not k else -.225]) @ T.scale(150),'bsdf':diffuse('ede9df')},
+           'ground':{'type':'rectangle','to_world':T.translate([0,0,ground_z if ground_z is not None else (-.267 if not k else -.225)]) @ T.scale(150),'bsdf':diffuse('ede9df')},
            'sky':{'type':'constant','radiance':{'type':'rgb','value':[.48,.49,.50]}},
            'sun':{'type':'directional','direction':(-sun).tolist(),'irradiance':{'type':'rgb','value':[2.65,2.53,2.32]}}}
     with TemporaryDirectory() as tmp:
