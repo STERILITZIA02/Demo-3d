@@ -24,9 +24,13 @@ The scripts write 1920 × 1080 PNGs to [`prototypes/pitch-778/`](prototypes/pitc
 
 ## Other studies
 
+For a new garden comparison, start with the courtyard in [pitch_models.py](prototypes/scenes/pitch_models.py). Keep the camera, sun, yard and output size fixed across the pair. Move the feature under study and label the detail the viewer should compare. For a separate shot, [the root study](prototypes/scenes/render_root_study.py) shows how to reuse the camera and renderer with a different model. Give the new PNG its own filename and add its render command here.
+
 | Study | Files | Render command |
 | --- | --- | --- |
 | Kitchen island clearance | [Room](prototypes/pitch-778/K1-measured.png) · [Wide island](prototypes/pitch-778/K2-wide-open.png) · [Narrow island](prototypes/pitch-778/K3-narrow-open.png) | `python prototypes/scenes/render_pitch.py --samples 60 --only K1-measured K2-wide-open K3-narrow-open` |
 | Early garden and kitchen layouts | [Six views](prototypes/views/) | `python prototypes/scenes/render.py` |
 
 [Garden planner](https://github.com/STERILITZIA02/Group-Internship) · [Contributing](https://github.com/STERILITZIA02/Group-Internship/blob/main/CONTRIBUTING.md) · [License](LICENSE)
+
+[Sprint plan](https://github.com/STERILITZIA02/Group-Internship/wiki/Sprint-Plan#sprint-schedule) · [Daily stand-ups](https://github.com/STERILITZIA02/Group-Internship/wiki/Daily-Stand-ups) · [Sprint meetings](https://github.com/STERILITZIA02/Group-Internship/wiki/Meeting-Log#sprint-meetings)
