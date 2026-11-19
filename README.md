@@ -6,7 +6,7 @@ One Auckland courtyard model, rendered from a fixed camera. Moving the same matu
 | --- | --- |
 | [![Tree beside the dining table](prototypes/pitch-778/G2-table.png)](prototypes/pitch-778/G2-table.png) | [![Tree at the fence beside the bin route](prototypes/pitch-778/G3-fence.png)](prototypes/pitch-778/G3-fence.png) |
 
-[Measured yard](prototypes/pitch-778/G1-yard.png) · [Established roots, in section](prototypes/pitch-778/G4-established-roots.png) · [Reference measurements](https://github.com/STERILITZIA02/Group-Internship/wiki/Sprint-Plan#reference-measurements)
+[Yard layout](prototypes/pitch-778/G1-yard.png) · [Established roots, in section](prototypes/pitch-778/G4-established-roots.png)
 
 ## Render the garden
 
